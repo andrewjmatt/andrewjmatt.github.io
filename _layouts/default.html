@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_site_key"></script>
+    <script src="/assets/js/scripts.js"></script>
+    {% if page.url == "/" %}<script src="/assets/js/scroll.js"></script>{% endif %}
+    <script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('_reCAPTCHA_site_key_', {action: 'homepage'}).then(function(token) {
+           ...
+        });
+    });
+    </script>
+  </head>
+  <body class="has-navbar-fixed-top">
+    {% include navigation.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>

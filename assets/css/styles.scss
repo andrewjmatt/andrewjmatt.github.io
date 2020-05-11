@@ -1,0 +1,37 @@
+---
+---
+//Import Google font
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+
+// Set brand colors
+$scarlet-flame: #CD212A;
+$blue-grey: #3F3D56;
+
+//Update global variables
+$primary: $scarlet-flame;
+$dark:$blue-grey;
+$family-primary: 'Poppins', sans-serif;
+
+// Mobile Nav Fix
+@media screen and (max-width: 1023px){
+  .navbar.is-primary {
+    background-color: transparent !important;
+  }
+  .navbar-menu {
+    box-shadow: 0 14px 12px rgba(10, 10, 10, 0.1);
+  }
+  .navbar-menu, .navbar-brand {
+    background-color: #CD212A !important;
+  }
+  .navbar-item, .navbar-link {
+    color: #FFFFFF !important;
+  }
+  a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active {
+      background-color: #b71d26 !important;
+      color: #FFFFFF !important;
+  }
+}
+
+// Import
+@import "node_modules/bulma/bulma.sass";
+@import "node_modules/animate.css/animate";
